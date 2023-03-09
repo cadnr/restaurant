@@ -1,3 +1,4 @@
 import loadPage from './load-page.js';
-
-loadPage();
+let currentPage = 'Menu';
+console.log(currentPage);
+loadPage(currentPage);

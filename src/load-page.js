@@ -1,4 +1,7 @@
-const loadPage = (text) => {
+import home from './home';
+import menu from './menu';
+
+const loadPage = (currentPage) => {
   const content = document.getElementById('content');
   content.textContent = '';
   const nav = document.createElement('nav');
@@ -11,24 +14,31 @@ const loadPage = (text) => {
 
   nav.append(homeButton, menuButton, contactButton);
 
-  const divMiddle = document.createElement('div');
-  divMiddle.classList.add('middle-section');
-  const header = document.createElement('header');
-  const h1 = document.createElement('h1');
-  h1.textContent = 'Good Food Restaurant';
-  header.append(h1);
-  const main = document.createElement('main');
-  main.textContent = `Odio aut id veritatis. Voluptas ratione voluptas sint necessitatibus
-  assumenda. Amet magnam qui in magni. Sunt modi aliquid aut et. Qui
-  officia voluptatem veniam sint ut qui et. Et illo voluptates quis ad
-  molestias. Sunt quidem dignissimos deserunt alias optio est nihil.
-  Eveniet ea tenetur commodi sit possimus. Beatae voluptas assumenda
-  ratione tenetur. Repudiandae aut vitae saepe in ut necessitatibus
-  dolor possimus. Nihil perferendis consectetur consectetur repellendus.`;
-
-  divMiddle.append(header, main);
+  let divMiddle;
+  switch (currentPage) {
+    case 'Home':
+      divMiddle = home();
+      break;
+    case 'Menu':
+      divMiddle = menu();
+      break;
+    case 'Contact':
+      divMiddle = contact();
+      break;
+    default:
+      alert("I don't know such values");
+  }
 
   content.append(nav, divMiddle);
+
+  const navButtons = document.querySelectorAll('nav > button');
+
+  Object.values(navButtons).forEach((button) => {
+    button.addEventListener('click', (e) => {
+      currentPage = e.target.innerText;
+      loadPage(currentPage);
+    });
+  });
 };
 
 export default loadPage;
