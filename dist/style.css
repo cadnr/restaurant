@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: antiquewhite;
+  display: flex;
+  flex-direction: column;
+}
+
+#content {
+  flex: 1 0 auto;
+}
+
+nav {
+  text-align: center;
+  background-color: burlywood;
+}
+
+button {
+  margin: 0.3rem;
+  padding: 0.4rem;
+  background-color: lightsalmon;
+  border-style: solid;
+  border-color: black;
+  border-radius: 30%;
+}
+
+.middle-section {
+  background-color: rgb(243, 207, 159);
+  width: 40rem;
+  margin: 0 auto;
+}
+
+header {
+  padding: 3rem;
+  color: green;
+  text-align: center;
+}
+main {
+  padding: 2rem;
+  width: 400px;
+  text-align: center;
+  margin: auto;
+}
+footer {
+  text-align: center;
+  flex-shrink: 0;
+  background-color: burlywood;
+}
