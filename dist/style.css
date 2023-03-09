@@ -9,7 +9,7 @@ body {
 }
 
 body {
-  background-color: antiquewhite;
+  background-image: url(italian-cuisine-gd20f1ecee_1920.jpg);
   display: flex;
   flex-direction: column;
 }
@@ -20,7 +20,7 @@ body {
 
 nav {
   text-align: center;
-  background-color: burlywood;
+  background-color: rgba(222, 184, 135, 0.7);
 }
 
 button {
@@ -33,14 +33,14 @@ button {
 }
 
 .middle-section {
-  background-color: rgb(243, 207, 159);
+  background-color: rgba(243, 207, 159, 0.37);
   width: 40rem;
   margin: 0 auto;
 }
 
 header {
   padding: 3rem;
-  color: green;
+  color: rgb(194, 79, 223);
   text-align: center;
 }
 main {
@@ -52,5 +52,5 @@ main {
 footer {
   text-align: center;
   flex-shrink: 0;
-  background-color: burlywood;
+  background-color: rgba(222, 184, 135, 0.7);
 }
